@@ -7,10 +7,7 @@ file = openpyxl.load_workbook('C:/Users/Vyacheslav/Desktop/testSubjects.xlsx')
 currentSheet = file.active
 
 searchName = input("Введите ФИО для поиска: ")
-#for row in currentSheet.iter_rows(values_only=True):
-#    for value in row:
-#        if value == searchName:
-#            print(currentSheet.cell(row=row, column=5).value)
+
 for i in range(1, 14):
     if currentSheet.cell(row=i, column=2).value == searchName:
         print(currentSheet.cell(row=i, column=2).value)
